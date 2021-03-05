@@ -1,0 +1,101 @@
+@import './../variables';
+@import './../mixins';
+
+.solveClientProblemes {
+  padding-top: 212px;
+  padding-bottom: 100px;
+  
+  @mixin cardSCP($bg:$colorSystemAlabaster) {
+    background-color: $bg;
+    box-shadow: $colorSystemRedSixth;
+    padding: 56px 40px 30px 40px;
+    border-radius: 16px;
+  }
+
+  .inner {
+    max-width: 1184px;
+
+    @media (max-width:1265px) {
+      max-width: calc(100% - 50px);
+    }
+
+    &Children {
+      //max-width: 1184px;
+      width: 100%;
+      @include cardSCP();
+    }
+    
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: calc(100% - 56px);
+      top: 28px;
+      right: -24px;
+      z-index: 2;
+      @include cardSCP($colorSystemConcrete);
+      //background-color: red !important;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: calc(100% - 90px);
+      top: 45px;
+      right: -48px;
+      z-index: 1;
+      @include cardSCP($colorSystemConcrete);
+      //background-color: red !important;
+    }
+  }
+
+  .title {
+    margin-bottom: 23px !important;
+  }
+
+  .subTitle {
+    @include subTitle();
+    margin-bottom: 48px !important;
+  }
+
+  .content {
+    display: flex;
+  }
+
+  .list {
+    max-width: 360px; 
+
+    &Item {
+      margin-bottom: 33px;
+      line-height: 1.257rem;
+      color: $colorSystemShark;
+      font-family: $FirstFontLight;
+    }
+  }
+
+  .logos {
+    max-width: 608px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: 16px;
+    margin-bottom: 30px;
+
+    &Item {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 290px;
+      height: 90px;
+      background-color: $colorSystemConcrete;
+      border-radius: 1rem;
+      text-align: center;
+      font-size: 1.313rem;
+      font-family: $FirstFontLight;
+      color: $colorSystemJumbo;
+    }
+  }
+  
+}

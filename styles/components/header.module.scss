@@ -1,0 +1,81 @@
+@import './../variables';
+@import './../mixins';
+
+.Header {
+  margin-bottom: 56px;
+  
+  .Innner {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 26px;
+  }
+
+  .Logo {
+    padding-right: 40px;
+
+    @media (max-width: 992px) {
+      order: 1;
+    }
+  }
+  
+  .Menu {
+    display: flex;
+    align-items: center;
+    padding-top: 2px;
+
+    &Item {
+      margin-right: 51px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &Link {
+        color: $colorSystemShark;
+        transition: all .3s linear;
+
+        &:hover {
+          color: $colorSystemRedCinnabar;
+        }
+      }
+    }
+
+    @media (max-width: 992px) {
+      order: 3;
+      margin: 15px auto 0;
+    }
+  }
+
+  .Btns {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-top: 6px;
+
+    &Item {
+      margin-right: 35px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &Link {
+        @include link();
+      }
+
+      &Btn {
+        @include btn();
+        @include boxshadow($colorSystemRedFifth);
+        
+        &>span {
+          @include  LinearGrandientText(); 
+        }
+      }
+    }
+
+    @media (max-width: 992px) {
+      order: 2;
+    }
+  }
+}

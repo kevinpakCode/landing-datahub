@@ -1,0 +1,33 @@
+@import './../variables';
+@import './../mixins';
+
+.banner {
+  position: relative;
+  padding-bottom: 128px;
+  
+
+  .inner {
+    display: flex;
+    justify-content: space-between;
+    //align-items: center;
+  }
+
+  .content {
+    max-width: 555px;
+    margin-top: 87px;
+    padding-left: 1px;
+  }
+
+  .text {
+    /*margin-bottom: 61px;
+    font-size: 1.5rem;
+    font-family: $FirstFontLight;*/
+    @include subTitle();
+  }
+
+  .image {
+    width: 607px;
+    min-height: 465px;
+    text-align: center;
+  }
+}

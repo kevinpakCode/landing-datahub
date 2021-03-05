@@ -1,0 +1,28 @@
+@import './../variables';
+@import './../mixins';
+
+
+.bannerConsultation {
+  width: 100%;
+  background: $colorSystemRedSecond;
+  box-shadow: -10px -10px 20px #FFFFFF, 8px 8px 16px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+  padding: 56px 40px 72px 40px;
+
+  .title {
+    max-width: 960px;
+    color: $colorWhite !important;
+    line-height: 3.188rem !important;
+    margin-bottom: 51px !important;
+  }
+
+  .btn {
+    @include btn();
+    width: 256px;
+    text-align: center;
+    padding: 19px 35px !important;
+    &>span {
+      @include  LinearGrandientText();
+    }
+  }
+}

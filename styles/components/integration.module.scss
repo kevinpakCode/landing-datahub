@@ -1,0 +1,48 @@
+@import './../variables';
+@import './../mixins';
+
+.integration {
+  padding-top: 73px;
+  padding-bottom: 130px;
+  
+
+  .title {
+    text-align: center;
+    margin-bottom: 24px !important;
+  }
+
+  .subTitle {
+    text-align: center;
+    @include subTitle();
+    margin-bottom: 46px;
+  }
+
+  .list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 172px;
+
+    &Item {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      max-width: 253px;
+
+      &Icon {
+        display: inline-block;
+        height: 100px;
+        line-height: 100px;
+        margin-bottom: 14px;
+      }
+
+      &Title {
+        font-size: 1.875rem;
+        color: $colorBlack;
+        font-family: $GolosRegular;
+        line-height: 2rem;
+      }
+    }
+  }
+}

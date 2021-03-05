@@ -1,0 +1,62 @@
+/*---------------------------------*\
+*              GOLOS               *
+*----------------------------------*/
+@font-face {
+  font-family: Golos-Regular;
+  src: local("Golos-Regular"), url("/fonts/golos-text/Golos_Text_Regular.woff");
+}
+
+@font-face {
+  font-family: Golos-Medium;
+  src: local("Golos-Medium"), url("/fonts/golos-text/Golos_Text_Medium.woff");
+}
+
+@font-face {
+  font-family: Golos-Bold;
+  src: local("Golos-Bold"), url("/fonts/golos-text/Golos_Text_Bold.woff");
+}
+
+
+/*---------------------------------*\
+*          SOURCE_SANS_PRO         *
+*----------------------------------*/
+@font-face {
+  font-family: SourceSansPro-Light;
+  src: local("SourceSansPro-Light"), url("/fonts/Source_Sans_Pro/SourceSansPro-Light.ttf");
+}
+
+@font-face {
+  font-family: SourceSansPro-Regular;
+  src: local("SourceSansPro-Regular"), url("/fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf");
+}
+
+@font-face {
+  font-family: SourceSansPro-SemiBold;
+  src: local("SourceSansPro-SemiBold"), url("/fonts/Source_Sans_Pro/SourceSansPro-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: SourceSansPro-Bold;
+  src: local("SourceSansPro-Bold"), url("/fonts/Source_Sans_Pro/SourceSansPro-Bold.ttf");
+}
+
+
+
+/*---------------------------------*\
+*             Circe                *
+*----------------------------------*/
+
+@font-face {
+  font-family: Circe-Bold;
+  src: local("Circe-Bold"), url("/fonts/circe/Circe-Bold.ttf");
+}
+
+@font-face {
+  font-family: Circe-ExtraBold;
+  src: local("Circe-ExtraBold"), url("/fonts/circe/Circe-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: Circe-Linght;
+  src: local("Circe-Linght"), url("/fonts/circe/Circe-Linght.ttf");
+}

@@ -1,0 +1,26 @@
+@import './../variables';
+@import './../mixins';
+
+.getDemo {
+  max-width: 503px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: $colorWhite;
+  border-radius: 30px;
+  @include boxshadow();
+
+  .field {
+    padding-left: 41px;
+
+    &::placeholder {
+      font-size: 1rem;
+      font-family: $FirstFontRegular;
+    }
+  }
+
+  .btn {
+    @include btn($colorSystemRedThird, $colorWhite , 30px, 18px, 40px);
+    min-width: 192px;
+  }
+}

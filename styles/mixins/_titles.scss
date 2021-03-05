@@ -1,0 +1,19 @@
+@mixin FistTitle($size:3rem, $color:$colorBlack){
+  font-size: $size !important;
+  color: $color !important;
+  line-height: $size !important;
+  font-family: $GolosBold !important;
+  margin-top: 0 !important;
+  margin-bottom: 24px !important;
+}
+
+
+/*
+* SubTitle
+*/
+@mixin subTitle($size:1.5rem, $color:$colorSystemRedFifth, $mb:61px) {
+  margin-bottom: $mb;
+  font-size: $size;
+  font-family: $FirstFontLight;
+  color: $color;
+}
