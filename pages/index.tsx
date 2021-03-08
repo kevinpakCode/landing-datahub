@@ -1,6 +1,6 @@
 import LandingPage from './../layouts/landing-page'
 import HomeBanner from './../components/home-banner'
-import Functionality from './../components/functionality/functionality'
+import Technologies from '../components/technologies/technologies'
 import SolveClentProblemes from './../components/solve-client-problemes/solve-client-problemes'
 import Integration from './../components/integration/integration'
 
@@ -14,7 +14,7 @@ const Home = () => {
   return (
     <LandingPage>
       <HomeBanner data={dataBanner}/>
-      <Functionality />
+      <Technologies />
       <SolveClentProblemes />
       <Integration />
     </LandingPage>

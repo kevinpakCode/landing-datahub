@@ -24,7 +24,7 @@ const HomeBanner = (props) => {
                 <div className={styles.getDemo}></div>
               </div>
               <div className={styles.image}>
-                <img src={`/images/svg/${(dataInfos.image && dataInfos.image.length>0)? dataInfos.image : 'robo.svg'}`} alt="banner image"/>
+                <img src={`/images/svg/${(dataInfos.image && dataInfos.image.length>0)? dataInfos.image : 'robo-02.svg'}`} alt="banner image"/>
               </div>
             </div>
           </Col>

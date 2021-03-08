@@ -7,11 +7,11 @@ import BannerConsultation from './../../components/banners/banner-consulation'
 
 const Integration = () => {
   return (
-    <div className={styles.integration}>
+    <div className={styles.integration} id="integration">
       <Container>
         <Row>
           <Col sm={12}>
-            <h2 className={styles.title}>Интегрируемся без забот</h2>
+            <h2 className={styles.title}>Интегрируемся технично</h2>
             <div className={styles.subTitle}>Возьмем на себя рутину и поддержим на всех этапах</div>
             <ul className={styles.list}>
               <li className={styles.listItem}>
@@ -116,7 +116,8 @@ const Integration = () => {
                 <span className={styles.listItemTitle}>Будем поддерживать</span>
               </li>
             </ul>
-            <BannerConsultation />
+            
+            <BannerConsultation  id="contact-banner"/>
           </Col>
         </Row>
       </Container>

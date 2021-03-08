@@ -6,7 +6,7 @@ import styles from './../../styles/components/solve-client-problemes.module.scss
 
 const SolveClentProblemes = () => {
   return (
-    <div className={styles.solveClientProblemes}>
+    <div className={styles.solveClientProblemes} id="clients">
       <Container>
         <Row>
           <Col sm={12}>

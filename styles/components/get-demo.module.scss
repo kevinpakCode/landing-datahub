@@ -20,7 +20,7 @@
   }
 
   .btn {
-    @include btn($colorSystemRedThird, $colorWhite , 30px, 18px, 40px);
+    @include btn($colorSystemRedSeventh, $colorWhite , 30px, 18px, 40px); // old color $colorSystemRedThird
     min-width: 192px;
   }
 }

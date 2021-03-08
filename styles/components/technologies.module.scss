@@ -1,0 +1,40 @@
+@import './../variables';
+@import './../mixins';
+
+.technologies {
+  padding-top: 46px;
+  padding-bottom: 100px;
+
+  .title {
+    text-align: center;
+  }
+
+  .steps {
+    height: 90px;
+    margin-bottom: 45px;
+  }
+
+  .content {
+    margin-top: 42px;
+    max-width: 501px;
+  }
+
+  .image {
+    text-align: center;
+    padding-left: 38px;
+  }
+
+  .supTitle {
+    font-family: $FirstFontMedium;
+    background: linear-gradient(0deg, #FF5E3A 0%, #FF9500 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 9px;
+  }
+
+  .text {
+    line-height: 20px;
+    color: #878789;
+  }
+  
+}
