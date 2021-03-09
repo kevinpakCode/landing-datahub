@@ -1,5 +1,4 @@
-@import './../variables';
-@import './../mixins';
+@import './../commons.scss';
 
 .getDemo {
   max-width: 503px;
@@ -23,4 +22,5 @@
     @include btn($colorSystemRedSeventh, $colorWhite , 30px, 18px, 40px); // old color $colorSystemRedThird
     min-width: 192px;
   }
+  
 }

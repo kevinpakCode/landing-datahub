@@ -19,13 +19,13 @@ const Header = () => {
                 <div className={styles.Logo}>
                   <Link  href="/">
                     <a className={styles.LogoLink}>
-                      <img src="/images/svg/datahub_logo-v2.svg" alt="logo"/>
+                      <img src="/images/svg/datahub_logo-v3.svg" alt="logo"/>
                     </a>
                   </Link>
                 </div>
                 <ul className={styles.Menu}>
                   <li className={styles.MenuItem}>
-                    <Anchor href="#technologies" className={styles.MenuItemLink}>Технологии</Anchor>
+                    <Anchor href="#technologies" className={styles.MenuItemLink}>Функции</Anchor>
                   </li>
                   <li className={styles.MenuItem}>
                     <Anchor href="#clients" className={styles.MenuItemLink}>Клиенты</Anchor>

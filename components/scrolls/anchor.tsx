@@ -17,7 +17,6 @@ const Anchor = (props) => {
     const elemId = path.replace(/[#\/]/g, '')
     //setDoScroll(!doScroll)
     setIdElem(elemId)  
-    console.log(elem, elemId)
   }
 
  

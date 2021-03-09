@@ -14,7 +14,7 @@ const Footer = () => {
             <div className={styles.logo}>
               <Link  href="/">
                 <a className={styles.logoLink}>
-                  <img src="/images/svg/datahub_logo.svg" alt="logo"/>
+                  <img src="/images/svg/datahub_logo-v4.svg" alt="logo"/>
                 </a>
               </Link>
             </div>
@@ -25,7 +25,7 @@ const Footer = () => {
                 <h5 className={styles.columnTitle}>Навигация</h5>
                 <ul className={styles.columnList}>
                   <li className={styles.columnListItem}>
-                    <Link  href="/"><a className={styles.columnListItemLink}>Технологии</a></Link>
+                    <Link  href="/"><a className={styles.columnListItemLink}>Функции</a></Link>
                   </li>
                   <li className={styles.columnListItem}>
                     <Link  href="/"><a className={styles.columnListItemLink}>Клиенты</a></Link>
@@ -44,9 +44,6 @@ const Footer = () => {
                   </li>
                   <li className={styles.columnListItem}>
                     <Link  href="/"><a className={styles.columnListItemLink}>mail@datahub</a></Link>
-                  </li>
-                  <li className={styles.columnListItem}>
-                    <Link  href="/"><a className={styles.columnListItemLink}>Москва, адрес 11</a></Link>
                   </li>
                 </ul>
               </div>

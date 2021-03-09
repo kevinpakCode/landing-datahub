@@ -6,8 +6,8 @@ import Integration from './../components/integration/integration'
 
 const Home = () => {
   const dataBanner = {
-    title: `Отслеживание плюс аналитика репутации в соцмедия и СМИ`,
-    text: `Поможем во влиянии на аудиторию`,
+    title: `Управление брендом и репутацией в соцмедиа и СМИ`,
+    text: `Отслеживайте и анализируйте влияние информационной среды на имидж вашего бренда`,
     getDemo : true,
     image: ''
   }

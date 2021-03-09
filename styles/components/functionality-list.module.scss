@@ -1,0 +1,16 @@
+@import './../commons.scss';
+
+.functionalityListItem {
+  &:nth-child(2n) {
+
+    &>[class*="image"]{
+      order: 2;
+      text-align: center;
+      margin-right: 72px;
+    }
+
+    &>[class*="content"]{
+      order: 1;
+    }
+  }
+}

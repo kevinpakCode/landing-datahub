@@ -1,13 +1,12 @@
-@import './../variables';
-@import './../mixins';
+@import './../commons.scss';
 
 
 .footer {
   padding: 39px 0 60px 0;
-  background-color: $colorSystemMystic;
+  background-color: $colorSystemShark;
 
   .logo {
-    padding-top: 17px;
+    padding-top: 10px;
   }
 
   .grpColumn {
@@ -16,7 +15,7 @@
 
   .column {
     width: 300px;
-    margin-right: 10px;
+    margin-right: 22px;
     padding-top: 20px;
 
     &:last-child {
@@ -24,18 +23,18 @@
     }
 
     &Title {
-      font-size: 1.125;
+      font-size: 1.125rem;
       font-family: $GolosBold;
-      color: $colorBlack;
+      color: $colorWhite !important;
     }
 
     &List {
       &Item {
-        margin-bottom: 25px;
+        margin-bottom: 20px;
 
         &Link {
           font-size: 1rem;
-          color: $colorSystemShark;
+          color: $colorWhite;
           line-height: 20px;
           transition:  all .3s linear;
 

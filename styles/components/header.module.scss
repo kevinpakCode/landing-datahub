@@ -1,5 +1,5 @@
-@import './../variables';
-@import './../mixins';
+@import './../commons.scss';
+
 
 .Header {
   margin-bottom: 56px;
@@ -66,7 +66,7 @@
 
       &Btn {
         @include btn();
-        @include boxshadow($colorSystemRedFifth);
+        @include boxshadow($colorSystemForShadow);
         
         &>span {
           @include  LinearGrandientText(); 

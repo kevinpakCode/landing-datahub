@@ -1,5 +1,4 @@
-@import './../variables';
-@import './../mixins';
+@import './../commons.scss';
 
 .banner {
   position: relative;
@@ -13,9 +12,13 @@
   }
 
   .content {
-    max-width: 555px;
+    max-width: 610px;
     margin-top: 87px;
     padding-left: 1px;
+  }
+
+  .title {
+    margin-bottom: 9px !important;
   }
 
   .text {
@@ -23,6 +26,8 @@
     font-size: 1.5rem;
     font-family: $FirstFontLight;*/
     @include subTitle();
+    line-height: 1.875rem;
+    margin-bottom: 39px;
   }
 
   .image {

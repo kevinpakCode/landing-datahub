@@ -1,0 +1,42 @@
+@import './../commons.scss';
+
+.functionalityItem {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 130px;
+
+  &:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  .image {
+    max-width: 350px;
+    text-align: left;
+  }
+
+  .content {
+    max-width: 712px;
+    min-height: 311px;
+    background-color: $colorWhite;
+    @include  boxshadow($colorSystemForShadow);
+    padding: 50px 70px 50px;
+    border-radius: 16px;
+  }
+
+  .supTitle {
+    font-family: $FirstFontMedium;
+    background: $colorSystemRedThird;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 9px;
+  }
+
+  .text {
+    line-height: 20px;
+    color: #878789;
+  }
+
+}
+

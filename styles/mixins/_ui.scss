@@ -1,7 +1,7 @@
 /*
 * BoxShadow
 */
-@mixin boxshadow($color:$colorSystemRedFifth) {
+@mixin boxshadow($color:$colorSystemForShadow) {
   box-shadow: $color;
 }
 
