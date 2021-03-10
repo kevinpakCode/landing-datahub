@@ -1,4 +1,6 @@
 import {useState, useEffect, useRef} from 'react'
+import {connect} from 'react-redux'
+import Modal from 'react-bootstrap/Modal'
 
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -7,8 +9,16 @@ import Col from 'react-bootstrap/Col'
 import styles from './../styles/components/header.module.scss'
 import Link from 'next/link'
 import Anchor from './../components/scrolls/anchor'
+import ModalRequest from './modales/request'
 
-const Header = () => {
+const Header = (props) => {
+  
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  
+
   return (
     <>
       <header className={styles.Header}>
@@ -40,11 +50,11 @@ const Header = () => {
                 <ul className={styles.Btns}>
                   <li className={styles.BtnsItem}>
                     <Link  href="/">
-                      <a className={styles.BtnsItemLink}>Войти</a>
+                      <a className={styles.BtnsItemLink} >Войти</a>
                     </Link>
                   </li>
                   <li className={styles.BtnsItem}>
-                    <button className={styles.BtnsItemBtn}><span>Заявка на доступ</span></button>
+                    <button className={styles.BtnsItemBtn} onClick={() => handleShow()}><span>Заявка на доступ</span></button>
                   </li>
                 </ul>
               </div>
@@ -52,11 +62,35 @@ const Header = () => {
           </Row>
         </Container>
       </header>
-      <style jsx global>{`
-    
-      `}</style>
+
+      <ModalRequest show={show} onHide={handleClose}/>
     </>
   )
 }
 
-export default Header
+
+
+
+export default connect(
+  state => ({
+    appStore: state
+  }),
+  dispatch => ({
+
+    //onClick={() => props.OpenModale()}
+    OpenModale: () => {
+      console.log('open')
+      dispatch({
+        type: 'OPEN_MODALE',
+        playload: true
+      })
+    },
+    CloseModale: () => {
+      console.log('close')
+      dispatch({
+        type: 'CLOSE_MODALE',
+        playload: false
+      })
+    },
+  })
+)(Header)

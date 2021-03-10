@@ -10,7 +10,10 @@
   @include boxshadow();
 
   .field {
-    padding-left: 41px;
+    background-color: $colorWhite;
+    padding: 12px 16px 2px 41px;
+    border-color: transparent;
+    box-shadow: none;
 
     &::placeholder {
       font-size: 1rem;

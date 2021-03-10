@@ -22,6 +22,8 @@ $colorSystemMercury:#E5E5E5;
 $colorSystemAlabaster: #f8f8f8;
 $colorOutrageousOrange: #FF5E3A;
 $colorPizaze: #FF9500;
+$colorPaleSky: #6D7885;
+$colorBalticSea: #1D1B1F;
 
 $colorSystemRed : linear-gradient(0deg, #FF2A68 0%, #FF5E3A 100%);
 $colorSystemRedSecond: linear-gradient(250.45deg, #FF5E3A 21.1%, #FF9500 167.47%);
@@ -32,7 +34,7 @@ $colorSystemRedSixth: -3px -3px 10px rgba(255, 255, 255, 0.2), 8px 8px 16px rgba
 $colorSystemRedSeventh: linear-gradient(264.9deg, #FF3B30 -6.02%, #FF5E3A 59.7%, #FF9500 115.3%);
 
 $colorSystemForShadow: 8px 8px 16px rgba(0, 0, 0, 0.15);
-
+$colorSystemForShadowSecond: rgba(255, 94, 58, 0.45);
 
 //Flat Colors
 $colorTurquoise: #1ABC9C;
