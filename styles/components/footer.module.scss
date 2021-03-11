@@ -2,47 +2,21 @@
 
 
 .footer {
-  padding: 39px 0 60px 0;
-  background-color: $colorSystemShark;
+  padding: 30px 0 30px 0;
+  background-color: $colorSystemMercurySecond;// old $colorSystemShark
+
+  .inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
   .logo {
     padding-top: 10px;
   }
 
-  .grpColumn {
-    display: flex;
+  .copyright {
+    color: $colorSystemJumbo;
   }
-
-  .column {
-    width: 300px;
-    margin-right: 22px;
-    padding-top: 20px;
-
-    &:last-child {
-      margin-right: 0;
-    }
-
-    &Title {
-      font-size: 1.125rem;
-      font-family: $GolosBold;
-      color: $colorWhite !important;
-    }
-
-    &List {
-      &Item {
-        margin-bottom: 20px;
-
-        &Link {
-          font-size: 1rem;
-          color: $colorWhite;
-          line-height: 20px;
-          transition:  all .3s linear;
-
-          &:hover {
-            color: $colorSystemRedCinnabar;
-          }
-        }
-      }
-    }
-  }
+  
 }

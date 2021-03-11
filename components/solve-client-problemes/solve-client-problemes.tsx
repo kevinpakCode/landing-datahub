@@ -13,29 +13,26 @@ const SolveClentProblemes = () => {
             <div className={styles.inner}>
               <div className={styles.innerChildren}>
                 <h2 className={styles.title}>Решаем задачи клиентов</h2>
-                <div className={styles.subTitle}>Короткое пояснение какие мы крутые</div>
+                <div className={styles.subTitle}>Мы помогаем бизнесу анализировать и учитывать мнения клиентов</div>
                 <div className={styles.content}>
                   <ul className={styles.list}>
                     <li className={styles.listItem}>
-                      <strong>Определили репутационные риски</strong> выросли <br className="hide-for-mobil"/>вот такие показатели круто
+                      <strong>Экономим время</strong> автоматизируем рутинные процессы. Автоматический мониторинг социальных СМИ и медиа, блогов, мессенджеров и подкастов. Простой и понятный интерфейс
                     </li>
                     <li className={styles.listItem}>
-                      <strong>Определили репутационные риски</strong> выросли <br className="hide-for-mobil"/>  вот такие показатели круто на 50%
+                      <strong>Снизижаем риски</strong> контроль медиаполя, генерация позитива и точечная проработка негатива. 
                     </li>
                     <li className={styles.listItem}>
-                      <strong>Снизили расходы на SMM специалиста на 100%</strong> выросли <br className="hide-for-mobil"/>вот такие показатели круто
+                      <strong>Работаем над репутацией</strong> выявляем точки социальной напряженности, своевременно отрабатываем жалобы клиентов в социальных сетях.
                     </li>
                     <li className={styles.listItem}>
-                      <strong>Определили репутационные риски</strong> выросли <br className="hide-for-mobil"/>вот такие показатели круто
+                      <strong>Быть эффективнее</strong> планирование проведения рекламных кампаний, улучшение маркетинговой стратегии
                     </li>
                     <li className={styles.listItem}>
-                      <strong>Определили репутационные риски</strong> выросли <br className="hide-for-mobil"/>вот такие показатели круто
+                      <strong>Улучшить сервис</strong> влияем на ЦА, формируем положительный имидж с помощью СМИ. Повышаем лояльность потребителей
                     </li>                  
                   </ul>
                   <div className={styles.logos}>
-                    <span className={styles.logosItem}>LOGO</span>
-                    <span className={styles.logosItem}></span>
-                    <span className={styles.logosItem}></span>
                     <span className={styles.logosItem}></span>
                     <span className={styles.logosItem}></span>
                     <span className={styles.logosItem}></span>

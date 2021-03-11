@@ -50,12 +50,12 @@
   }
 
   .title {
-    margin-bottom: 23px !important;
+    margin-bottom: 19px !important;
   }
 
   .subTitle {
     @include subTitle();
-    margin-bottom: 48px !important;
+    margin-bottom: 52px !important;
   }
 
   .content {
@@ -63,18 +63,19 @@
   }
 
   .list {
-    max-width: 360px; 
+    max-width: 560px; // old 360
 
     &Item {
       margin-bottom: 33px;
-      line-height: 1.257rem;
+      line-height: 1.3rem;
+      letter-spacing: 0.25px;
       color: $colorSystemShark;
       font-family: $FirstFontLight;
     }
   }
 
   .logos {
-    max-width: 608px;
+    max-width: 406px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -86,7 +87,7 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 290px;
+      width: 400px; //old 290px
       height: 90px;
       background-color: $colorSystemConcrete;
       border-radius: 1rem;

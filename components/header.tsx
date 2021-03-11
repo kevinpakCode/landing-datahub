@@ -43,9 +43,6 @@ const Header = (props) => {
                   <li className={styles.MenuItem}>
                     <Anchor href="#integration" className={styles.MenuItemLink}>Интеграция</Anchor>
                   </li>
-                  <li className={styles.MenuItem}>
-                    <Anchor href="#contact-banner" className={styles.MenuItemLink}>Контакты</Anchor>
-                  </li>
                 </ul>
                 <ul className={styles.Btns}>
                   <li className={styles.BtnsItem}>
