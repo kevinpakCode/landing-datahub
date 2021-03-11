@@ -4,6 +4,9 @@
 @import './mixins';
 @import './ui';
 
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   background-color: $colorSystemConcrete; // old $colorSystemMercury
