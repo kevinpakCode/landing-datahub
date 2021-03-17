@@ -13,10 +13,11 @@ spec:
       {{- include ".helm.selectorLabels" . | nindent 6 }}
   template:
     metadata:
-      {{- with .Values.podAnnotations }}
       annotations:
-        {{- toYaml . | nindent 8 }}
-      {{- end }}
+        current_time: "{{ date "20060102150405" now }}"
+        {{- with .Values.podAnnotations }}
+          {{- toYaml . | nindent 8 }}
+        {{- end }}
       labels:
         {{- include ".helm.selectorLabels" . | nindent 8 }}
     spec:
