@@ -1,0 +1,40 @@
+image: docker:stable
+
+services:
+  - docker:dind
+
+stages:
+  - build
+  - deploy
+
+variables:
+  RAILS_ENV: test
+  CONTAINER_LANDING_IMAGE: registry.gitlab.com/epicenter-ru/landing-datahub:latest
+
+.protected_branches: &protected_branches
+  - master
+
+build_landing:
+  stage: build
+  variables:
+    DOCKER_DRIVER: overlay2
+    DOCKER_TLS_CERTDIR: ""
+  script:
+    - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN registry.gitlab.com
+    - docker build -f .build/Dockerfile.production -t $CONTAINER_LANDING_IMAGE .
+    - docker push $CONTAINER_LANDING_IMAGE
+  only:
+    - master
+
+deploy_landing:
+  stage: deploy
+  image: devth/helm
+  script:
+    - mkdir -p ~/.kube
+    - echo $KUBECONFIG_PRODUCTION | base64 -d > ~/.kube/config
+    - helm upgrade --install --namespace production landing-datahub  .helm
+  environment:
+    name: landing-datahub
+    url: https://datahub.ru
+  only:
+    - master

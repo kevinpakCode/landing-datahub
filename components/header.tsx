@@ -51,7 +51,7 @@ const Header = (props) => {
                 </ul>
                 <ul className={styles.Btns}>
                   <li className={styles.BtnsItem}>
-                    <Link  href="/">
+                    <Link  href="https://lk.datahub.ru">
                       <a className={styles.BtnsItemLink} >Войти</a>
                     </Link>
                   </li>
