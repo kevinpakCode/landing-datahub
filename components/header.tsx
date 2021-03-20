@@ -8,7 +8,6 @@ import Col from 'react-bootstrap/Col'
 
 import styles from './../styles/components/header.module.scss'
 import Link from 'next/link'
-import Anchor from './../components/scrolls/anchor'
 import ModalRequest from './modales/request'
 
 const Header = (props) => {
@@ -35,13 +34,19 @@ const Header = (props) => {
                 </div>
                 <ul className={styles.Menu}>
                   <li className={styles.MenuItem}>
-                    <Anchor href="#technologies" className={styles.MenuItemLink}>Функции</Anchor>
+                    <Link  href="#technologies" >
+                      <a  className={styles.MenuItemLink}>Функции</a>
+                    </Link>
                   </li>
                   <li className={styles.MenuItem}>
-                    <Anchor href="#clients" className={styles.MenuItemLink}>Клиенты</Anchor>
+                    <Link  href="#clients" >
+                      <a  className={styles.MenuItemLink}>Клиенты</a>
+                    </Link>
                   </li>
                   <li className={styles.MenuItem}>
-                    <Anchor href="#integration" className={styles.MenuItemLink}>Интеграция</Anchor>
+                    <Link  href="#integration" >
+                      <a  className={styles.MenuItemLink}>Интеграция</a>
+                    </Link>
                   </li>
                 </ul>
                 <ul className={styles.Btns}>
