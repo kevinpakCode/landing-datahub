@@ -6,6 +6,7 @@
   box-shadow: -10px -10px 20px #FFFFFF, 8px 8px 16px rgba(0, 0, 0, 0.15);
   border-radius: 16px;
   padding: 56px 40px 72px 40px;
+  overflow: hidden;
 
   .title {
     max-width: 960px;
@@ -21,6 +22,19 @@
     padding: 19px 35px !important;
     &>span {
       @include  LinearGrandientText();
+    }
+  }
+
+  @media (max-width: 576px) {
+    padding: 56px 15px 72px 15px;
+
+    .title {
+      line-height: 110%
+    }
+
+    .btn {
+      display: block;
+      margin: auto;
     }
   }
 }

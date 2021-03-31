@@ -13,7 +13,11 @@
     @include subTitle();
     text-align: center;
     margin-bottom: 71px !important;
-    font-size: 20px;
+    font-size: 1.25rem;
+
+    @media (max-width: 992px) {
+      font-size: 1.125rem;
+    }
   }
 
  /* .steps {

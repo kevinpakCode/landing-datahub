@@ -3,7 +3,6 @@
 .functionalityItem {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 130px;
 
@@ -38,5 +37,32 @@
     color: #878789;
   }
 
+
+  @media (max-width: 992px) {
+    flex-direction: column;
+    margin-bottom: 70px;
+
+    .image {
+      order: 1 !important;
+      text-align: center;
+      margin-bottom: 28px;
+      margin-right: 0 !important;
+
+      &>img {
+        max-width: 278px;
+      }
+    }
+
+    .content {
+      order: 2 !important;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .content {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
 }
 

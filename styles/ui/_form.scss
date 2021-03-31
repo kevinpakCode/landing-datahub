@@ -180,4 +180,32 @@ textarea {
     padding-top: 35px;
     margin-bottom: 50px;
   }
+
+  &__text {
+    opacity: 0.3;
+    color: $colorBlack;
+
+    &-mark {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background-color: $colorBlack;
+        left: 0;
+        bottom: 0;
+      }
+    }
+  }
+
+  &__link {
+    color: $colorBlack;
+    text-decoration: underline;
+
+    &:hover {
+      color: $colorPizaze;
+    }
+  }
 }

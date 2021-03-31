@@ -8,9 +8,9 @@ h1,
   @include FistTitle();
   line-height: 3.375rem !important;
 
-  @media (max-width: 960px) {
-    font-size: 2.125rem !important;
-    line-height: 2rem !important;
+  @media (max-width: 992px) {
+    font-size: 2.25rem !important;
+    line-height: 110%!important;
   }
 }
 
@@ -21,6 +21,11 @@ h2,
 .h2 {
   @include FistTitle();
   margin-bottom: 50px !important;
+
+  @media (max-width: 992px) {
+    font-size: 2.25rem !important;
+    line-height: 2rem !important;
+  }
 }
 
 /*
@@ -32,8 +37,9 @@ h3,
   line-height: 31px !important;
   margin-bottom: 19px !important;
 
-  @media (min-width: 769px) {
-    font-size: 1.5rem;
+  @media (min-width: 768px) {
+    font-size: 1.875rem;
+    line-height: 1.875rem;
   }
 }
 
@@ -72,8 +78,8 @@ h5,
 * Custom Container
 */
 .container {
-  //max-width: 1262px;
-  min-width: 1262px;
+  max-width: 1262px;
+  //min-width: 1262px;
 }
 
 
@@ -195,3 +201,4 @@ br {
 
 
 @import './ui/form';
+@import './ui/icons';

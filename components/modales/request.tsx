@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
 import Modal from 'react-bootstrap/Modal'
+import Link from 'next/link'
 
 import styles from './../../styles/components/modal.module.scss'
 
@@ -24,7 +25,7 @@ const ModalRequest = (props) =>{
       email: Yup.string().email('Введите правильный адрес электронной почты').required('Обязательно поля'),
       phone: Yup.string().required('Обязательно поля'),
       company: Yup.string().required('Обязательно поля'),
-      message: Yup.string().required('Обязательно поля'),
+      message: Yup.string(),
     }),
 
     onSubmit: values => {
@@ -99,7 +100,7 @@ const ModalRequest = (props) =>{
             </div>
 
             <div className="cpn-form-row">
-              <label htmlFor="user-message" className="cpn-form-row__label">Ваше сообщение <span className="cpn-form-row__label-required" >*</span></label>
+              <label htmlFor="user-message" className="cpn-form-row__label">Ваше сообщение </label>
               <textarea 
                 id="user-message" 
                 className={`cpn-field ${formik.touched.message && formik.errors.message ? 'cpn-field--error': 'cpn-field--valid'}`}
@@ -111,9 +112,16 @@ const ModalRequest = (props) =>{
               {formik.touched.message && formik.errors.message ? (<div className="cpn-field-message">{formik.errors.message}</div>) : null}
             </div>
 
-            <div className="cpn-form-row cpn-form-row--btns">
+            <div className={`${styles.formBtns} cpn-form-row cpn-form-row--btns`}>
               <button type="submit" className={styles.btn+' cpn-form-row__btn-submit cpn-form-row__btn-submit--block'}><span>Отправить</span></button>
             </div>
+
+            <div className="cpn-form-row">
+              <p className="cpn-form-row__text">
+                Нажимая на эту кнопку вы соглашаетесь на  <Link href="#"><a className="cpn-form-row__link">обработку персональных данных </a></Link>
+              </p>
+            </div>
+
           </form>
         </Modal.Body>
       </Modal>

@@ -97,5 +97,55 @@
       color: $colorSystemJumbo;
     }
   }
+
+
+  @media (max-width: 992px) {
+
+    .inner {
+      max-width: calc(100% - 20px);
+
+      &::before {
+        right: -15px;
+      }
+
+      &::after {
+        right: -30px;
+      }
+    }
+
+    .content {
+      flex-direction: column;
+
+      .logos {
+        margin-left: 0;
+       
+        &Item {
+          margin-bottom: 30px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+
+  @media (max-width: 576px) {
+    margin-bottom: 0;
+    padding-bottom: 50px;
+    
+    .inner {
+      max-width: calc(100% - 5px);
+
+      &::before {
+        right: -8px;
+      }
+
+      &::after {
+        right: -16px;
+      }
+    }
+  }
   
 }

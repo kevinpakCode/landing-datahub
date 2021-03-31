@@ -16,6 +16,10 @@ const Header = (props) => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  const [mobileMenu, setMobileMenu] =  useState(false)
+  const handleMobileMenu = () => setMobileMenu(!mobileMenu)
+  const CloseMobileMenu = () => setMobileMenu(false)
+
   
 
   return (
@@ -32,33 +36,37 @@ const Header = (props) => {
                     </a>
                   </Link>
                 </div>
-                <ul className={styles.Menu}>
-                  <li className={styles.MenuItem}>
-                    <Link  href="#technologies" >
-                      <a  className={styles.MenuItemLink}>Функции</a>
-                    </Link>
-                  </li>
-                  <li className={styles.MenuItem}>
-                    <Link  href="#clients" >
-                      <a  className={styles.MenuItemLink}>Клиенты</a>
-                    </Link>
-                  </li>
-                  <li className={styles.MenuItem}>
-                    <Link  href="#integration" >
-                      <a  className={styles.MenuItemLink}>Интеграция</a>
-                    </Link>
-                  </li>
-                </ul>
-                <ul className={styles.Btns}>
-                  <li className={styles.BtnsItem}>
-                    <Link  href="https://lk.datahub.ru">
-                      <a className={styles.BtnsItemLink} >Войти</a>
-                    </Link>
-                  </li>
-                  <li className={styles.BtnsItem}>
-                    <button className={styles.BtnsItemBtn} onClick={() => handleShow()}><span>Заявка на доступ</span></button>
-                  </li>
-                </ul>
+                <div className={`${styles.grpList} ${mobileMenu? styles.open :''}`}>
+                  <ul className={styles.Menu}>
+                    <li className={styles.MenuItem}>
+                      <Link  href="#technologies" >
+                        <a  className={styles.MenuItemLink} onClick={CloseMobileMenu}>Функции</a>
+                      </Link>
+                    </li>
+                    <li className={styles.MenuItem}>
+                      <Link  href="#clients" >
+                        <a  className={styles.MenuItemLink} onClick={CloseMobileMenu}>Клиенты</a>
+                      </Link>
+                    </li>
+                    <li className={styles.MenuItem}>
+                      <Link  href="#integration" >
+                        <a  className={styles.MenuItemLink} onClick={CloseMobileMenu}>Интеграция</a>
+                      </Link>
+                    </li>
+                  </ul>
+                  <ul className={styles.Btns}>
+                    <li className={styles.BtnsItem}>
+                      <Link  href="https://lk.datahub.ru">
+                        <a className={styles.BtnsItemLink} >Войти</a>
+                      </Link>
+                    </li>
+                    <li className={styles.BtnsItem}>
+                      <button className={styles.BtnsItemBtn} onClick={() => handleShow()}><span>Заявка на доступ</span></button>
+                    </li>
+                  </ul>
+                  <button className={`${styles.btnCloseMenu} icon-close2 icon-inner`} onClick={handleMobileMenu}></button>
+                </div>
+                <button className={`${styles.mobileMenu} icon-mobile-menu2 icon-inner`} onClick={handleMobileMenu}></button>
               </div>
             </Col>
           </Row>
