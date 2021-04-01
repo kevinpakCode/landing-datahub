@@ -19,7 +19,9 @@
   },
   "homepage": "https://gitlab.com/epicenter-ru/landing-datahub#readme",
   "dependencies": {
+    "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
+    "dotenv": "^8.2.0",
     "formik": "^2.2.6",
     "next": "^10.0.7",
     "react": "^17.0.1",

@@ -4,12 +4,13 @@ import { useFormik } from 'formik'
 import * as Yup from 'yup'
 import Modal from 'react-bootstrap/Modal'
 import Link from 'next/link'
+import axios from 'axios'
 
 import styles from './../../styles/components/modal.module.scss'
 
 const ModalRequest = (props) =>{
   const modale = useRef(null)
-
+  const [successRequest, setSuccessRequest] = useState(false)
 
   const formik = useFormik({
     initialValues: {
@@ -28,15 +29,44 @@ const ModalRequest = (props) =>{
       message: Yup.string(),
     }),
 
-    onSubmit: values => {
-      alert(JSON.stringify(values, null, 2))
+    onSubmit: (values, {resetForm}) => {
+
+      const dataForm = {
+        data : {
+          name : values.name,
+          email: values.email,
+          phone: values.phone,
+          company: values.company,
+          text: values.message
+        }
+      }
+
+      
+      //=> Axios, post data
+      axios({
+        method: 'post',
+        url: `${process.env.API_URL}/api/v1/forms`,
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+        data: JSON.stringify(dataForm),
+      })
+      .then(function (response) {
+        resetForm({values:''})
+        setSuccessRequest(true)
+
+        setTimeout(()=> {
+          setSuccessRequest(false)
+        }, 3000)
+      })
+      .catch(function (error) {
+        console.log(error)
+      })
     },
   })
 
 
-  useEffect(() =>{
-    //console.log(modale.current)
-  })
 
 
 
@@ -46,6 +76,12 @@ const ModalRequest = (props) =>{
       <Modal className={styles.modal} show={props.show} onHide={props.onHide} ref={modale}>
         <Modal.Header closeButton className="btn-close"></Modal.Header>
         <Modal.Body className={styles.body}>
+          { 
+            successRequest&&
+            <div className={styles.successRequest}>
+              Ваша заявка успешно отправлена!
+            </div>
+          }
           <form onSubmit={formik.handleSubmit} className={styles.form}>
             <div className="cpn-form-row">
               <label htmlFor="user-name" className="cpn-form-row__label">Имя <span className="cpn-form-row__label-required" >*</span></label>
