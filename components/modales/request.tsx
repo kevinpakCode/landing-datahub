@@ -53,7 +53,13 @@ const ModalRequest = (props) =>{
         data: JSON.stringify(dataForm),
       })
       .then(function (response) {
-        resetForm({values:''})
+        resetForm({values:{
+          name: '',
+          email: '',
+          phone: '',
+          company: '',
+          message:''
+        }})
         setSuccessRequest(true)
 
         setTimeout(()=> {
