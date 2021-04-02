@@ -15,8 +15,7 @@
   .Logo {
     padding-right: 40px;
 
-    @media (max-width: 992px) {
-    }
+
   }
   
   .grpList {
@@ -40,12 +39,12 @@
       .Menu {
         flex-direction: column;
         align-items: center;
-        padding-bottom: 41px;
+        padding-bottom: 0px;
 
         &Item {
           width: 100%;
           text-align: center;
-          margin: 0 0 38px;
+          margin: 0 0 32px;
         }
       }
 
@@ -56,7 +55,48 @@
         &Item {
           width: 100%;
           text-align: center;
-          margin: 0 0 38px;
+          margin: 0 0 32px;
+
+          &Link {
+            color: $colorPizaze;
+            &::before {
+              background-color: $colorPizaze;
+            }
+          }
+
+          &Btn {
+            background-color: transparent;
+            background-clip: unset !important;
+            box-shadow: none;
+            padding: 0;
+
+            &>span {
+              -webkit-text-fill-color: $colorPizaze !important;
+              
+              &::before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                transition: all 0.3s ease;
+                background: $colorPizaze;
+              }
+            }
+
+            &:hover {
+              &>span {
+                background-color: transparent;
+                background-clip: unset !important;
+                -webkit-text-fill-color: $colorPizaze !important;
+
+                &::before {
+                  width: 0;
+                }
+              }
+            }
+          }
         }
       }
 
@@ -117,6 +157,10 @@
 
       &Link {
         @include link();
+
+        &Second {
+          display: none;
+        }
       }
 
       &Btn {
@@ -134,11 +178,42 @@
   .mobileMenu {
     width: 24px;
     height: 24px;
-    margin-left: auto;
+    margin-left: 59px;  //margin-left: auto;
     display: none;
+  }
 
-    @media (max-width: 992px) {
+
+  @media (max-width: 992px) {
+    .Logo {
+      padding-right: 2px;
+    }
+
+    .Btns {
+      &Item {
+        &Link {
+          &Second {
+            display: inline-block;
+            margin-left: auto;
+          }
+        }
+      }
+    }
+
+    .mobileMenu {
       display: inline-block;
+    }
+  }
+
+
+  @media (max-width: 768px) {
+    .Logo {
+      img {
+        max-width: 180px;
+      }
+    }
+
+    .mobileMenu {
+      margin-left: 23px;
     }
   }
 }

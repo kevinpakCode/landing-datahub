@@ -95,6 +95,10 @@
       font-size: 1.313rem;
       font-family: $FirstFontLight;
       color: $colorSystemJumbo;
+      background-image: url('/images/svg/datahub_logo-v3.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 310px auto;
     }
   }
 
@@ -117,10 +121,18 @@
       flex-direction: column;
 
       .logos {
+        display: flex;
+        flex-wrap: inherit;
+        width: 100%;
+        max-width: 100%;
         margin-left: 0;
+        margin-right: 0;
        
         &Item {
+          max-width: 187px;
+          height: 42px;
           margin-bottom: 30px;
+          background-size: 145px auto;
 
           &:last-child {
             margin-bottom: 0;
@@ -138,12 +150,28 @@
     .inner {
       max-width: calc(100% - 5px);
 
+      &Children {
+       padding: 56px 20px 30px 20px; 
+      }
+      
+
       &::before {
         right: -8px;
       }
 
       &::after {
         right: -16px;
+      }
+    }
+
+    .content {
+      .logos {
+        &Item {
+          width: 73px;
+          height: 73px;
+          background-image: url('/images/svg/logo-min.svg');
+          background-size: 52px auto;
+        }
       }
     }
   }

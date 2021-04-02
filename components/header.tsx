@@ -66,6 +66,9 @@ const Header = (props) => {
                   </ul>
                   <button className={`${styles.btnCloseMenu} icon-close2 icon-inner`} onClick={handleMobileMenu}></button>
                 </div>
+                <Link  href="https://lk.datahub.ru">
+                  <a className={`${styles.BtnsItemLink} ${styles.BtnsItemLinkSecond}`} >Войти</a>
+                </Link>
                 <button className={`${styles.mobileMenu} icon-mobile-menu2 icon-inner`} onClick={handleMobileMenu}></button>
               </div>
             </Col>
