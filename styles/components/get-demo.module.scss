@@ -1,19 +1,22 @@
 @import './../commons.scss';
 
 .getDemo {
+  position: relative;
   max-width: 503px;
   display: flex;
   align-items: center;
-  overflow: hidden;
+  //overflow: hidden;
   background: $colorWhite;
   border-radius: 30px;
   @include boxshadow();
 
   .field {
     background-color: $colorWhite;
-    padding: 5px 16px 2px 41px;
-    border-color: transparent;
+    //padding: 5px 16px 2px 41px;
+    padding: 16px 12px 16px 41px;
+    border: solid 2px transparent;
     box-shadow: none;
+    border-radius: 30px;
 
     &::placeholder {
       font-size: 1rem;
@@ -21,9 +24,28 @@
     }
   }
 
+  &.error {
+    .field {
+      border-color: $colorAmaranth;
+    }
+  }
+
   .btn {
     @include btn($colorSystemRedSeventh, $colorWhite , 30px, 18px, 40px); // old color $colorSystemRedThird
     min-width: 192px;
+  }
+
+  .successRequest {
+    text-align: center;
+    padding: 15px;
+    color: $colorWhite;
+    background-color: $colorGreenSea;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 70px;
   }
 
   @media (max-width: 576px) {
@@ -48,6 +70,10 @@
     .btn {
       width: 300px;
       max-width: 300px;
+    }
+
+    .successRequest {
+      top: 135px;
     }
   }
 
