@@ -15,12 +15,10 @@ const GetDemo = () => {
     const val = e.target.value
     setPhone(val)
     setPhoneError(false)
-    console.log(val)
   }
 
   const handleBlur = e => {
     setPhoneBlur(true)
-    console.log(phoneBlur)
   }
 
   const handleSubmit = e => {
