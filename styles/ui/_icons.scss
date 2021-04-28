@@ -27,3 +27,10 @@
 .icon-mobile-menu2 {
   @include icons-formats(24px, 24px, 'i/icon-mobile-menu2.svg', $colorSystemShark, $colorPizaze);
 }
+
+/*
+==> icon-logout
+*/
+.icon-logout {
+  @include icons-formats(24px, 24px, 'i/icon-logout.svg', $colorSystemShark, $colorPizaze);
+}
