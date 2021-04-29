@@ -76,15 +76,12 @@
 
   .logos {
     max-width: 406px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
     margin-left: auto;
     margin-right: 16px;
     margin-bottom: 30px;
 
     &Item {
-      display: inline-flex;
+      display: flex;
       align-items: center;
       justify-content: center;
       width: 400px; //old 290px
@@ -95,15 +92,28 @@
       font-size: 1.313rem;
       font-family: $FirstFontLight;
       color: $colorSystemJumbo;
-      background-image: url('/images/svg/datahub_logo-v3.svg');
+      /*background-image: url('/images/svg/datahub_logo-v3.svg');
       background-repeat: no-repeat;
       background-position: center;
-      background-size: 310px auto;
+      background-size: 310px auto;*/
+      text-align: center;
+      line-height: 73px;
+      margin-bottom: 16px;
+
+      &>img {
+        width: calc(100% - 90px);
+      }
     }
   }
 
 
   @media (max-width: 992px) {
+
+    .logos {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
 
     .inner {
       max-width: calc(100% - 20px);
@@ -122,23 +132,29 @@
 
       .logos {
         display: flex;
-        flex-wrap: inherit;
+        //flex-wrap: inherit;
         width: 100%;
         max-width: 100%;
         margin-left: 0;
         margin-right: 0;
        
         &Item {
-          max-width: 187px;
-          height: 42px;
+          max-width: 295px;
+          height: 66px;
           margin-bottom: 30px;
-          background-size: 145px auto;
+          /*background-size: 145px auto;*/
 
           &:last-child {
             margin-bottom: 0;
           }
         }
       }
+    }
+  }
+
+  @media (max-width: 734px) {
+    .logos {
+      justify-content: center;
     }
   }
 
@@ -167,10 +183,11 @@
     .content {
       .logos {
         &Item {
-          width: 73px;
+          /*width: 73px;
           height: 73px;
           background-image: url('/images/svg/logo-min.svg');
-          background-size: 52px auto;
+          background-size: 52px auto;*/
+         
         }
       }
     }

@@ -3,6 +3,7 @@ import HomeBanner from './../components/home-banner'
 import Technologies from '../components/technologies/technologies'
 import SolveClentProblemes from './../components/solve-client-problemes/solve-client-problemes'
 import Integration from './../components/integration/integration'
+import IntegrationTechnology from '../components/integration/integration-technology'
 
 const Home = () => {
   const dataBanner = {
@@ -15,6 +16,7 @@ const Home = () => {
     <LandingPage>
       <HomeBanner data={dataBanner}/>
       <Technologies />
+      <IntegrationTechnology/>
       <SolveClentProblemes />
       <Integration />
     </LandingPage>

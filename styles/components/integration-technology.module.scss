@@ -1,0 +1,18 @@
+@import './../commons.scss';
+
+.integrationTechnology {
+  padding-top: 73px;
+  padding-bottom: 130px;
+  
+
+  .title {
+    text-align: center;
+    margin-bottom: 24px !important;
+  }
+
+  .subTitle {
+    text-align: center;
+    @include subTitle();
+    margin-bottom: 70px;
+  }
+}

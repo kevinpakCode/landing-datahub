@@ -33,9 +33,8 @@ const SolveClentProblemes = () => {
                     </li>                  
                   </ul>
                   <div className={styles.logos}>
-                    <span className={styles.logosItem}></span>
-                    <span className={styles.logosItem}></span>
-                    <span className={styles.logosItem}></span>
+                    <span className={styles.logosItem}><img src={'images/uploads/logo-onlineshtab.svg'} alt="logo onlineshtab"/></span>
+                    <span className={styles.logosItem}><img src={'images/uploads/logo-epicenter.svg'} alt="logo epicenter"/></span>
                   </div>
                 </div>
               </div>

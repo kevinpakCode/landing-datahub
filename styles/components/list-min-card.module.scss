@@ -1,0 +1,28 @@
+@import './../commons.scss';
+
+.listMinCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @media(max-width: 1228px) {
+    justify-content: center;
+  }
+
+  .item {
+    width: 296px;
+    height: 156px;
+    background: $colorWhite;
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.15);
+    border-radius: 16px;
+    margin-bottom: 16px;
+    text-align: center;
+    line-height: 156px;
+    overflow: hidden;
+
+    @media(max-width: 1228px) {
+      margin: 8px 8px;
+    }
+  }
+}
